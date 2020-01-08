@@ -1,4 +1,4 @@
-<!-- ![github build](https://github.com/kareem613/node-red-contrib-sequence-detector/workflows/Node.js%20Package/badge.svg) -->
+![github build](https://github.com/kareem613/node-red-contrib-inovelli-nodes/workflows/Node.js%20Package/badge.svg)
 
 ## Overview
 Decodes inovelli scene activation data and adds simplified properties to the payload.
@@ -7,7 +7,7 @@ Decodes inovelli scene activation data and adds simplified properties to the pay
 
 Input from home assistant events : all node with Event Type set to zwave.scene_activated
 
- ### Output
+### Output
 
 Looks for scene_id and scene_data properties in msg.payload.event. If found, adds button and click_count properties to msg.payload.event.
 
