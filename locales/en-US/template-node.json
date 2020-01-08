@@ -1,0 +1,12 @@
+{
+    "template-node": {
+        "template-node": "template-node",
+        "label": {
+            "text1": "text1",
+            "text2": "text2"
+        },
+        "errors": {
+            "error-message": "this is an error message"
+        }
+    }
+}

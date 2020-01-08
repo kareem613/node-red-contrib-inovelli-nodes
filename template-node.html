@@ -1,0 +1,41 @@
+
+<script type="text/x-red" data-template-name="inovelli-scene-decoder">
+    
+</script>
+
+<script type="text/x-red" data-help-name="inovelli-scene-decoder">
+    <p>Decodes inovelli scene activation data and adds simplified properties to the payload.</p>
+
+<h3>Details</h3>
+    <p>Looks for scene_id and scene_data properties in msg.payload.event. If found, adds button and click_count properties to msg.payload.event.</p>
+    <p>If either scene_id or scene_data is not found or if values are unsupported, the msg is not modified.
+
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('inovelli-scene-decoder',{
+        color:"#E2D96E",
+        category: 'Inovelli',
+        defaults: {
+            name: {value:"scene decoder"},
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-ellipsis-h",
+        paletteLabel: function() {
+            return "scene-decoder";
+        },
+        label: function() {
+            return this.name || "scene decoder";
+        },
+        outputLabels: ["output"],
+        oneditprepare: function() {
+        },
+        oneditsave: function() {
+        },
+        oneditcancel: function() {
+        },
+        oneditresize: function(size) {
+        }
+    });
+</script>

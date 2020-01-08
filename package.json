@@ -1,0 +1,35 @@
+{
+    "name": "node-red-contrib-inovelli-nodes",
+    "version": "0.0.1",
+    "description": "Nodes for simplifying automations with inovelli zwave devices.",
+    "keywords": [
+    ],
+    "main": "template-node.js",
+    "scripts": {
+        "test": "mocha \"test/**/*_spec.js\" --timeout 2000",
+        "test:watch": "mocha \"test/**/*_spec.js\" -w --timeout 2000"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kareem613/node-red-contrib-inovelli-nodes.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kareem613/node-red-contrib-inovelli-nodes/issues"
+    },
+    "author": {
+        "name": "Kareem Sultan",
+        "url": "https://maybe5.com//"
+    },
+    "license": "ISC",
+    "node-red": {
+        "nodes": {
+            "scene-decoder": "template-node.js"
+        }
+    },
+    "devDependencies": {
+        "mocha": "~6.2.2",
+        "mocha-testdata": "^1.2.0",
+        "node-red": "^0.18.4",
+        "node-red-node-test-helper": "^0.1.8"
+    }
+}
