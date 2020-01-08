@@ -26,7 +26,7 @@ describe('Supported Scene Inputs', function () {
       helper.stopServer(done);
   });
 
-  testData.givenAsync(runs).it('adds parameters', function (done, run) {
+  testData.given(runs).it('adds parameters', function (done, run) {
         
     var flow = [
           { id: "n1", type: "inovelli-scene-decoder", name: "inovelli-scene-decoder",wires:[["n2"]] },
