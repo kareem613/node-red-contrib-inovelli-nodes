@@ -8,13 +8,18 @@ helper.init(require.resolve('node-red'));
 
 describe('Supported Scene Inputs', function () {
   var runs = [
-    {it: '1 click up', scene_id: 1, scene_data:7680, clickCount : 1, button : "up"},
-    {it: '2 click up', scene_id: 1, scene_data:7860, clickCount : 2, button : "up"},
-    {it: '3 click up', scene_id: 1, scene_data:7920, clickCount : 3, button : "up"},
-    {it: '4 click up', scene_id: 1, scene_data:7980, clickCount : 4, button : "up"},
-    {it: '5 click up', scene_id: 1, scene_data:8040, clickCount : 5, button : "up"},
-    {it: '1 click down', scene_id: 2, scene_data:7680, clickCount : 1, button : "down"},
-    {it: '1 click config', scene_id: 3, scene_data:7680, clickCount : 1, button : "config"},
+    {it: '1 click up', scene_id: 1, scene_data:7680, clickCount : 1, button : "down", action:"tap"},
+    {it: '2 click up', scene_id: 1, scene_data:7860, clickCount : 2, button : "down", action:"tap"},
+    {it: '3 click up', scene_id: 1, scene_data:7920, clickCount : 3, button : "down", action:"tap"},
+    {it: '4 click up', scene_id: 1, scene_data:7980, clickCount : 4, button : "down", action:"tap"},
+    {it: '5 click up', scene_id: 1, scene_data:8040, clickCount : 5, button : "down", action:"tap"},
+    {it: '1 click down', scene_id: 2, scene_data:7680, clickCount : 1, button : "up", action:"tap"},
+    {it: '1 click config', scene_id: 3, scene_data:7680, clickCount : 1, button : "config", action:"tap"},
+    {it: 'hold down', scene_id: 1, scene_data:7800, clickCount : 1, button : "down", action:"hold"},
+    {it: 'release down', scene_id: 1, scene_data:7740, clickCount : 1, button : "down", action:"release"},
+    {it: 'hold up', scene_id: 2, scene_data:7800, clickCount : 1, button : "up", action:"hold"},
+    {it: 'release up', scene_id: 2, scene_data:7740, clickCount : 1, button : "up", action:"release"},
+    
   ];
 
   beforeEach(function (done) {

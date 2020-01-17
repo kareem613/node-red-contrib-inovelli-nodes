@@ -14,7 +14,9 @@ module.exports = function(RED) {
             7860: 2,
             7920: 3, 
             7980: 4,
-            8040: 5
+            8040: 5,
+            7800: 1,
+            7740: 1
         };
 
         initConfiguration();
@@ -32,8 +34,10 @@ module.exports = function(RED) {
                             var button = getButton(scene_id);
                             var clickCount = getClickCount(scene_data);
                             if(clickCount && button){
+                                var action = getAction(scene_data);
                                 msg.payload.event.button = button;
                                 msg.payload.event.click_count = clickCount;
+                                msg.payload.event.action = action;
                                 setStatus("green", button, clickCount);
                             }
                         }
@@ -59,6 +63,15 @@ module.exports = function(RED) {
         function getClickCount(scene_data){
             
             return clickMap[scene_data];
+        }
+
+        function getAction(scene_data){
+            if(scene_data == 7740){
+                return "release";
+            }else if(scene_data == 7800){
+                return "hold";
+            }
+            return "tap";
         }
 
         function initConfiguration() {
