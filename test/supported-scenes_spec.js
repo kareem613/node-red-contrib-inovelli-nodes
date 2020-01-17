@@ -44,6 +44,7 @@ describe('Supported Scene Inputs', function () {
             try{
               msg.payload.event.should.have.property('button', run.button);
               msg.payload.event.should.have.property('click_count', run.clickCount);
+              msg.payload.event.should.have.property('action', run.action);
               done();
             }catch(err){
               return done(err);

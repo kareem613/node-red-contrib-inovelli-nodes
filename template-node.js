@@ -5,8 +5,8 @@ module.exports = function(RED) {
         var node = this;
 
         var sceneMap = {
-            1: 'up',
-            2: 'down',
+            2: 'up',
+            1: 'down',
             3: 'config'
         };
         var clickMap = {
